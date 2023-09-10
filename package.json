@@ -48,6 +48,7 @@
     "lint:fix:yml": "prettier -w \"**/*.yml\""
   },
   "dependencies": {
+    "@arothuis/markdown-it-biblatex": "^1.0.1",
     "@sindresorhus/slugify": "^2.2.1",
     "concurrently": "^8.2.1",
     "consola": "^3.2.3",

@@ -22,6 +22,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@arothuis/markdown-it-biblatex@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@arothuis/markdown-it-biblatex@npm:1.0.1"
+  dependencies:
+    biblatex-csl-converter: ^2.0.4
+    citeproc: ^2.4.62
+  checksum: fb537cdf11733ffd56dac92420556efc079d046c91d5fcf7d7eedb463a418808c645093a8c5efdd3d0c880ab0ce364c15721d77d0ae0b76f39c4e541ee31391a
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.22.10, @babel/code-frame@npm:^7.22.5":
   version: 7.22.13
   resolution: "@babel/code-frame@npm:7.22.13"
@@ -204,6 +214,16 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: a2293971f0889726a3d5a35fcceedc71d2fa4c8d97f438fc348fe0cf7e739affc6e2665e4c6ddd4900714772e19bfd5d6feb967ca1f623b894c0099ecb148b52
+  languageName: node
+  linkType: hard
+
+"@babel/runtime-corejs3@npm:^7.16.5":
+  version: 7.22.15
+  resolution: "@babel/runtime-corejs3@npm:7.22.15"
+  dependencies:
+    core-js-pure: ^3.30.2
+    regenerator-runtime: ^0.14.0
+  checksum: 6e27ca3890282612316aa87a9cd60fc19888ac26c802af926b4488ad67b3b06929086884974e9237fa550f48a5fe22c9c5e5be229bba9c4c017cfb2374835518
   languageName: node
   linkType: hard
 
@@ -1094,6 +1114,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"biblatex-csl-converter@npm:^2.0.4":
+  version: 2.1.0
+  resolution: "biblatex-csl-converter@npm:2.1.0"
+  dependencies:
+    xregexp: ^5.1.0
+  checksum: 491f3612e503420ea0311adc3c46b82d8dc34127071de16a09abe796518896b8f92448ede78166e792b093f23f2e76f7f501734e8a1a496285c6ef39d4122023
+  languageName: node
+  linkType: hard
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -1238,6 +1267,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"citeproc@npm:^2.4.62":
+  version: 2.4.63
+  resolution: "citeproc@npm:2.4.63"
+  checksum: 15a22d857cabca6e28b79d52cff094949031145b3ff223ec17cb1b7f1be68b9ad63e8fcaa8621685f10c3c09daf72be58f9e9d20ef322e70e2b60dfbade27dc7
+  languageName: node
+  linkType: hard
+
 "clean-regexp@npm:^1.0.0":
   version: 1.0.0
   resolution: "clean-regexp@npm:1.0.0"
@@ -1358,6 +1394,13 @@ __metadata:
   version: 1.9.0
   resolution: "convert-source-map@npm:1.9.0"
   checksum: dc55a1f28ddd0e9485ef13565f8f756b342f9a46c4ae18b843fe3c30c675d058d6a4823eff86d472f187b176f0adf51ea7b69ea38be34be4a63cbbf91b0593c8
+  languageName: node
+  linkType: hard
+
+"core-js-pure@npm:^3.30.2":
+  version: 3.32.2
+  resolution: "core-js-pure@npm:3.32.2"
+  checksum: 19e781c624aee4003f8980f3c4fc441c16ef671473151affe114dc37cfe18958acdb42241b14827f62277f2d6eea73658f6c2e09131be20619e2859426bd03b4
   languageName: node
   linkType: hard
 
@@ -2832,6 +2875,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "markdown-docs@workspace:."
   dependencies:
+    "@arothuis/markdown-it-biblatex": ^1.0.1
     "@ianvs/prettier-plugin-sort-imports": ^4.1.0
     "@sindresorhus/slugify": ^2.2.1
     "@types/eslint": ^8.44.2
@@ -4519,6 +4563,15 @@ __metadata:
     imurmurhash: ^0.1.4
     signal-exit: ^4.0.1
   checksum: 8dbb0e2512c2f72ccc20ccedab9986c7d02d04039ed6e8780c987dc4940b793339c50172a1008eed7747001bfacc0ca47562668a069a7506c46c77d7ba3926a9
+  languageName: node
+  linkType: hard
+
+"xregexp@npm:^5.1.0":
+  version: 5.1.1
+  resolution: "xregexp@npm:5.1.1"
+  dependencies:
+    "@babel/runtime-corejs3": ^7.16.5
+  checksum: b7fee45db0daacc68d8f747c9d3865af6b1135866c6dbd72980fc7d61138310018c397effdc0ec1f50ced71b9437ccb70c27818f4470e28e48dc59ea6e3900a0
   languageName: node
   linkType: hard
 
