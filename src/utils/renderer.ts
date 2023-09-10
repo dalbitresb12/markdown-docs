@@ -21,19 +21,24 @@ export class Renderer {
       html: true,
       linkify: true,
       typographer: true,
-    })
-      .use(ReplaceLinkPlugin, { replaceLink: options?.replaceLink })
-      .use(AnchorPlugin, { slugify: options?.slugify })
-      .use(TocPlugin, { slugify: options?.slugify })
-      .use(MultiMdTablePlugin, {
-        multiline: true,
-        rowspan: true,
-        headerless: true,
-        multibody: true,
-        autolabel: true,
-      })
-      .use(HLJSPlugin, { inline: true })
-      .use(AttrsPlugin);
+    });
+    this.use(ReplaceLinkPlugin, { replaceLink: options?.replaceLink });
+    this.use(AnchorPlugin, { slugify: options?.slugify });
+    this.use(TocPlugin, { slugify: options?.slugify });
+    this.use(MultiMdTablePlugin, {
+      multiline: true,
+      rowspan: true,
+      headerless: true,
+      multibody: true,
+      autolabel: true,
+    });
+    this.use(HLJSPlugin, { inline: true });
+    this.use(AttrsPlugin);
+  }
+
+  private use<T>(plugin: MarkdownIt.PluginWithOptions<T>, options?: T, enabled: boolean = true) {
+    if (!enabled) return;
+    this.renderer.use(plugin, options);
   }
 
   render(source: string): string {
