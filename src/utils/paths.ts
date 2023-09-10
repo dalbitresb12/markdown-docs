@@ -15,6 +15,9 @@ logger.debug(`Input folder: ${inputFolder}`);
 export const inputFile = path.resolve(inputFolder, "index.md");
 logger.debug(`Input file: ${inputFile}`);
 
+export const referencesFile = path.resolve(inputFolder, "references.bib");
+logger.debug(`References file: ${referencesFile}`);
+
 export const outputFolder = path.resolve(__dirname, "../../output/");
 logger.debug(`Output folder: ${outputFolder}`);
 export const outputFile = path.resolve(outputFolder, "index.html");

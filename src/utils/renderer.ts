@@ -1,3 +1,4 @@
+import BiblatexPlugin from "@arothuis/markdown-it-biblatex";
 import MarkdownIt from "markdown-it";
 import AnchorPlugin from "markdown-it-anchor";
 import AttrsPlugin from "markdown-it-attrs";
@@ -11,6 +12,7 @@ export type SlugifyFn = (s: string) => string;
 export interface RendererOptions {
   slugify: SlugifyFn;
   replaceLink?: ReplaceLinkFn;
+  referencesFile?: string;
 }
 
 export class Renderer {
@@ -23,6 +25,13 @@ export class Renderer {
       typographer: true,
     });
     this.use(ReplaceLinkPlugin, { replaceLink: options?.replaceLink });
+    this.use(
+      BiblatexPlugin,
+      {
+        bibPath: options?.referencesFile,
+      },
+      !!options?.referencesFile,
+    );
     this.use(AnchorPlugin, { slugify: options?.slugify });
     this.use(TocPlugin, { slugify: options?.slugify });
     this.use(MultiMdTablePlugin, {
